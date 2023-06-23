@@ -4,28 +4,21 @@
   "layout": "LAYOUT",
   "layer_names": [
     "base",
-    "keypad",
-    "mod"
+    "keypad"
   ],
   "layers": [
     [
-         "&mt undefined ESCAPE",    "&kp N1",    "&kp N2",       "&kp N3",                 "&kp N4", "&kp N5",                 "&kp F11",                                                                                                       "&mo 2", "&kp N6",         "&kp N7",         "&kp N8",       "&kp N9",          "&kp N0",          "&kp LEFT_BRACKET",
-                      "&kp TAB",     "&kp Q",     "&kp W",        "&kp F",                  "&kp P",  "&kp B",           "&kp BACKSLASH",                                                                                                  "&bl BL_TOG",  "&kp J",          "&kp L",          "&kp U",        "&kp Y",   "&kp SEMICOLON",         "&kp RIGHT_BRACKET",
-                      "&kp DEL",     "&kp A",     "&kp R",        "&kp S",                  "&kp T",  "&kp G",               "&kp MINUS", "&kp LCTRL",         "&kp LCMD",                                        "&kp RCMD", "&kp RCTRL",   "&kp PLUS",  "&kp M",          "&kp N",          "&kp E",        "&kp I",           "&kp O",             "&kp BACKSPACE",
-       "&mt LEFT_SHIFT PAGE_UP",     "&kp Z",     "&kp X",        "&kp C",                  "&kp D",  "&kp V",                   "&none",     "&none",         "&kp HOME",  "&none",  "&none",                     "&kp END",     "&none",      "&none",  "&kp K",          "&kp H",      "&kp COMMA",      "&kp DOT",        "&kp FSLH", "&mt RIGHT_SHIFT PAGE_DOWN",
-                        "&mo 1", "&kp GRAVE", "&kp LCTRL", "&kp LEFT_ALT", "&mt LEFT_COMMAND GRAVE",                          "&kp BSPC",   "&kp DEL", "&kp SINGLE_QUOTE",                     "&mt RIGHT_ALT DOUBLE_QUOTES", "&kp SPACE", "&kp RETURN",           "&kp LEFT_ARROW", "&kp DOWN_ARROW", "&kp UP_ARROW", "&kp RIGHT_ARROW",                 "&kp TILDE"
+         "&mt undefined ESCAPE",    "&kp N1",    "&kp N2",       "&kp N3",                 "&kp N4",    "&kp N5",                 "&kp F11",          "&kp F12",                      "&kp N6",    "&kp N7",     "&kp N8",         "&kp N9",         "&kp N0",  "&kp LEFT_BRACKET",
+                      "&kp TAB",     "&kp Q",     "&kp W",        "&kp F",                  "&kp P",     "&kp B",           "&kp BACKSLASH",       "&bl BL_TOG",                       "&kp J",     "&kp L",      "&kp U",          "&kp Y",  "&kp SEMICOLON", "&kp RIGHT_BRACKET",
+                      "&kp DEL",     "&kp A",     "&kp R",        "&kp S",                  "&kp T",     "&kp G",               "&kp MINUS",        "&kp LCTRL",                    "&kp LCMD",                                  "&kp RCMD",      "&kp RCTRL",          "&kp PLUS",           "&kp M",     "&kp N",     "&kp E",   "&kp I",    "&kp O",             "&kp BACKSPACE",
+       "&mt LEFT_SHIFT PAGE_UP",     "&kp Z",     "&kp X",        "&kp C",                  "&kp D",     "&kp V",                   "&none",            "&none",                    "&kp HOME",     "&none",      "&none",        "&kp END",          "&none",             "&none",           "&kp K",     "&kp H", "&kp COMMA", "&kp DOT", "&kp FSLH", "&mt RIGHT_SHIFT PAGE_DOWN",
+                        "&mo 1", "&kp GRAVE", "&kp LCTRL", "&kp LEFT_ALT", "&mt LEFT_COMMAND GRAVE", "&kp SPACE",                 "&kp DEL", "&kp SINGLE_QUOTE", "&mt RIGHT_ALT DOUBLE_QUOTES", "&kp SPACE", "&kp RETURN", "&kp LEFT_ARROW", "&kp DOWN_ARROW",      "&kp UP_ARROW", "&kp RIGHT_ARROW", "&kp TILDE"
     ], [
-                      "&none",       "&kp F1",       "&kp F2",       "&kp F3",       "&kp F4", "&kp F5",                    "&kp F11",                                                                 "&kp F12", "&kp F6",     "&kp F7",            "&kp F8",          "&kp F9",    "&kp F10",      "&none",
-       "&bt BT_CLR undefined", "&bt BT_SEL 1", "&bt BT_SEL 2", "&bt BT_SEL 3", "&bt BT_SEL 4",  "&none",                "&bootloader",                                                             "&bootloader",  "&none",      "&none",             "&none",           "&none",      "&none",      "&none",
-                      "&none",        "&none",        "&none",        "&none",        "&none",  "&none",                      "&none",  "&none",  "&none",                      "&none",  "&none",       "&none",  "&none",      "&none",             "&none",           "&none",      "&none",      "&none",
-                      "&none",        "&none",        "&none",        "&none",        "&none",  "&none",                      "&none",  "&none",  "&none",  "&none",  "&none",  "&none",  "&none",       "&none",  "&none",      "&none",             "&none",           "&none",      "&none",      "&none",
-                      "&mo 0",        "&none",        "&none",        "&none",        "&none",                     "&kp C_PLAY_PAUSE",  "&none",  "&none",                      "&none",  "&none",       "&none",           "&kp C_PREV", "&kp C_VOLUME_DOWN", "&kp C_VOLUME_UP", "&kp C_NEXT", "&bl BL_TOG"
-    ], [
-       "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",           "&trans",                                                             "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
-       "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",           "&trans",                                                             "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
-       "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",           "&trans", "&trans", "&trans",                     "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
-       "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",           "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans", "&trans",
-       "&trans", "&trans", "&trans", "&trans", "&trans",                     "&trans", "&trans", "&trans",                     "&trans", "&trans", "&trans",           "&trans", "&trans", "&trans", "&trans", "&trans"
+                      "&none",       "&kp F1",       "&kp F2",       "&kp F3",       "&kp F4",           "&kp F5",           "&kp F11", "&kp F12", "&kp F6", "&kp F7", "&kp F8",     "&kp F9",           "&kp F10",           "&none",
+       "&bt BT_CLR undefined", "&bt BT_SEL 1", "&bt BT_SEL 2", "&bt BT_SEL 3", "&bt BT_SEL 4",            "&none",             "&none",   "&none",  "&none",  "&none",  "&none",      "&none",             "&none",           "&none",
+                      "&none",        "&none",        "&none",        "&none",        "&none",            "&none",             "&none",   "&none",  "&none",                          "&none",             "&none",           "&none",      "&none",      "&none",  "&none",  "&none",  "&none",  "&none",
+                      "&none",        "&none",        "&none",        "&none",        "&none",            "&none",             "&none",   "&none",  "&none",  "&none",  "&none",      "&none",             "&none",           "&none",      "&none",      "&none",  "&none",  "&none",  "&none",  "&none",
+                      "&mo 0",        "&none",        "&none",        "&none",        "&none", "&kp C_PLAY_PAUSE",             "&none",   "&none",  "&none",  "&none",  "&none", "&kp C_PREV", "&kp C_VOLUME_DOWN", "&kp C_VOLUME_UP", "&kp C_NEXT", "&bl BL_TOG"
     ]
   ]
 }
