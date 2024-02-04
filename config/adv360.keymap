@@ -1,21 +1,23 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     behaviors {
-       #include "macros.dtsi"
+        #include "macros.dtsi"
       #include "version.dtsi"
       #ifndef VERSION_MACRO
-      macro_ver: macro_ver {
-        compatible = "zmk,behavior-macro";
-        label = "macro_version";
-        #binding-cells = <0>;
-        bindings = <&kp RET>;
-      };
-      #endif
+
+        macro_ver: macro_ver {
+            compatible = "zmk,behavior-macro";
+            label = "macro_version";
+            #binding-cells = <0>;
+            bindings = <&kp RET>;
+        };
+
+        #endif
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -24,16 +26,13 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <175>;
             flavor = "tap-preferred";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
         };
+
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -43,22 +42,20 @@
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 38 39 40 41 42 43 44 45 54 55 56 57 58 59 71 72 73 74 75 35 36 37 38 52 53 65 66 67 68 69 70 71>;
             hold-trigger-on-release;
         };
+
         cpy_pst: cpy_pst {
             compatible = "zmk,behavior-tap-dance";
             label = "CPY_PST";
             #binding-cells = <0>;
-            bindings =
-                <&kp LG(C)>,
-                <&kp LG(V)>;
+            bindings = <&kp LG(C)>, <&kp LG(V)>;
 
             tapping-term-ms = <125>;
         };
+
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
-            bindings =
-                <&kp>,
-                <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -70,26 +67,29 @@
         };
     };
 
+    macros {
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&mt LS(LC(LG(LEFT_ALT))) DEL  &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4         &mt PERCENT NUMBER_5        &kp F11                                                                                       &kp F12           &mt CARET NUMBER_6  &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0    &mt LS(LEFT_BRACKET) LEFT_BRACKET
-                     &kp TAB                     &kp Q                 &kp W              &kp F                &kp P                        &kp B  &kp BACKSLASH                                                                             &kp LS(LA(MINUS))                        &kp J                   &kp L                  &kp U                          &kp Y          &mt LS(SEMI) SEMICOLON  &mt LS(RIGHT_BRACKET) RIGHT_BRACKET
-                     &kp ESC              &hml LCTRL A       &hml LEFT_ALT R        &hml LGUI S        &hml LSHIFT T  &hml LS(LC(LG(LEFT_ALT))) G      &kp MINUS  &caps_word          &cpy_pst          &kp LS(LG(R))  &kp LS(LC(LEFT_ALT))          &kp EQUAL  &hmr LS(LC(LG(LEFT_ALT))) M      &hmr RIGHT_SHIFT N       &hmr RIGHT_GUI E               &hmr RIGHT_ALT I                    &hmr RCTRL O                             &kp BSPC
-                   &kp LSHFT                     &kp Z                 &kp X              &kp C                &kp D                        &kp V                                   &kp C_PREV             &kp C_NEXT                                                                 &kp K                   &kp H    &mt LESS_THAN COMMA        &mt GREATER_THAN PERIOD               &mt QUESTION FSLH                            &kp RSHFT
-                       &mo 1                  &kp HOME             &kp PG_DN          &kp PG_UP              &kp END                                       &kp BACKSPACE   &mo 2  &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES             &kp ENTER      &kp SPACE                                             &kp LEFT               &kp DOWN                         &kp UP                       &kp RIGHT                      &mt TILDE GRAVE
+&mt LS(LC(LG(LEFT_ALT))) DEL  &mt EXCLAMATION NUMBER_1  &mt AT_SIGN NUMBER_2  &mt HASH NUMBER_3  &mt DOLLAR NUMBER_4  &mt PERCENT NUMBER_5         &kp F11                                                                                   &kp F12            &mt CARET NUMBER_6           &mt AMPERSAND NUMBER_7  &mt ASTERISK NUMBER_8  &mt LEFT_PARENTHESIS NUMBER_9  &mt RIGHT_PARENTHESIS NUMBER_0  &mt LS(LEFT_BRACKET) LEFT_BRACKET
+&kp ESC                       &kp Q                     &kp W                 &kp F              &kp P                &kp B                        &kp BACKSLASH                                                                             &kp LS(LA(MINUS))  &kp J                        &kp L                   &kp U                  &kp Y                          &mt LS(SEMI) SEMICOLON          &mt LS(RIGHT_BRACKET) RIGHT_BRACKET
+&kp TAB                       &hml LCTRL A              &hml LEFT_ALT R       &hml LGUI S        &hml LSHIFT T        &hml LS(LC(LG(LEFT_ALT))) G  &kp MINUS      &caps_word  &cpy_pst              &kp LS(LG(R))      &kp LS(LC(LEFT_ALT))  &kp EQUAL          &hmr LS(LC(LG(LEFT_ALT))) M  &hmr RIGHT_SHIFT N      &hmr RIGHT_GUI E       &hmr RIGHT_ALT I               &hmr RCTRL O                    &kp BSPC
+&kp LSHFT                     &kp Z                     &kp X                 &kp C              &kp D                &kp V                                                   &kp C_PREV            &kp C_NEXT                                                  &kp K                        &kp H                   &mt LESS_THAN COMMA    &mt GREATER_THAN PERIOD        &mt QUESTION FSLH               &kp RSHFT
+&mo 1                         &kp HOME                  &kp PG_DN             &kp PG_UP          &kp END                                           &mo 2          &kp LGUI    &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES  &kp ENTER             &kp SPACE                                       &kp LEFT                &kp DOWN               &kp UP                         &kp RIGHT                       &mt TILDE GRAVE
             >;
         };
 
         sys {
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans        &trans        &trans             &trans        &trans        &trans  &bootloader
-     &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                   &trans        &trans        &trans             &trans        &trans        &trans       &trans
-     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans      &trans       &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4       &trans
-     &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                                     &trans        &trans             &trans        &trans        &trans       &trans
-     &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &bl BL_TOG  &rgb_ug RGB_TOG                  &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOL_UP    &kp C_NEXT       &trans
+&bootloader  &trans  &trans  &trans  &trans  &trans  &trans                                          &trans           &trans        &trans        &trans             &trans        &trans        &bootloader
+&trans       &trans  &trans  &trans  &trans  &trans  &trans                                          &trans           &trans        &trans        &trans             &trans        &trans        &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans      &bt BT_CLR       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &trans
+&trans       &trans  &trans  &trans  &trans  &trans                  &trans      &trans                               &trans        &trans        &trans             &trans        &trans        &trans
+&trans       &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &bl BL_TOG  &rgb_ug RGB_TOG                &kp C_PREV    &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp C_NEXT    &trans
             >;
 
             label = "sys";
@@ -97,11 +97,11 @@
 
         num {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                            &trans      &kp LBKT                   &kp RBKT       &kp LEFT_PARENTHESIS      &kp RIGHT_PARENTHESIS  &kp LS(LBKT)  &kp LS(RBKT)
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                            &trans  &kp ASTERISK  &mt LS(NUMBER_7) NUMBER_7  &mt LS(NUMBER_8) NUMBER_8  &mt LS(NUMBER_9) NUMBER_9        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans        &trans  &trans      &kp PLUS  &mt LS(NUMBER_4) NUMBER_4  &mt LS(NUMBER_5) NUMBER_5  &mt LS(NUMBER_6) NUMBER_6     &kp EQUAL        &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                           &kp MINUS  &mt LS(NUMBER_1) NUMBER_1  &mt LS(NUMBER_2) NUMBER_2  &mt LS(NUMBER_3) NUMBER_3        &trans        &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &kp NUMBER_0  &trans                                   &trans                     &trans                     &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                            &trans  &kp LBKT      &kp RBKT                   &kp LEFT_PARENTHESIS       &kp RIGHT_PARENTHESIS      &kp LS(LBKT)  &kp LS(RBKT)
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                            &trans  &kp ASTERISK  &mt LS(NUMBER_7) NUMBER_7  &mt LS(NUMBER_8) NUMBER_8  &mt LS(NUMBER_9) NUMBER_9  &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans        &trans  &kp PLUS      &mt LS(NUMBER_4) NUMBER_4  &mt LS(NUMBER_5) NUMBER_5  &mt LS(NUMBER_6) NUMBER_6  &kp EQUAL     &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                        &kp MINUS     &mt LS(NUMBER_1) NUMBER_1  &mt LS(NUMBER_2) NUMBER_2  &mt LS(NUMBER_3) NUMBER_3  &trans        &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &kp NUMBER_0  &trans                &trans                     &trans                     &trans                     &trans        &trans
             >;
 
             label = "num";
